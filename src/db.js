@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://PPI:PPI123@cluster0.kgxfus6.mongodb.net/ppi2?retryWrites=true&w=majority');
+        await mongoose.connect('mongodb+srv://PPI:PPI123@cluster0.kgxfus6.mongodb.net/giic?retryWrites=true&w=majority');
         console.log(">>> Mongo ATLAS is Connected");
 
     } catch (error) {

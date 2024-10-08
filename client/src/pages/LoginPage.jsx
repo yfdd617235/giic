@@ -23,8 +23,16 @@ function LoginPage() {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div className='m-3 flex h-[calc(100vh-100px)] items-center justify-center'>
-      <div className='max-w-md w-full p-10 rounded-md border border-zinc-500'>
+    <div className='flex h-screen w-full items-center justify-center'
+      style={{
+        backgroundImage: `
+        linear-gradient(rgba(183, 202, 253, 0.842), rgba(255, 255, 255)),
+        url('${import.meta.env.BASE_URL}banner.webp.jpg')`,
+        backgroundSize: 'cover', // Ajusta el tamaño de fondo para cubrir el contenedor
+        backgroundRepeat: 'no-repeat', // Evita la repetición vertical y horizontal
+        backgroundPosition: 'center center' // Centra la imagen
+      }}>
+      <div className='bg-blue-950 bg-opacity-20 max-w-md w-full p-10 rounded-md shadow-md'>
         {
           signinErrors.map((error, i) => (
             <div className='bg-red-500 p-2 text-white text-center my-2' key={i}>
@@ -39,7 +47,7 @@ function LoginPage() {
           <input
             type='email'
             {...register("email", { required: true })}
-            className='w-full bg-zinc-700 text-white px-4 py-2 my-2 rounded-md'
+            className='w-full bg-blue-100 px-4 py-2 my-2 rounded-md'
             placeholder='Email'
           />
           {errors.email && <p className='text-red-500'>Email is required</p>}
@@ -47,7 +55,7 @@ function LoginPage() {
           <input
             type='password'
             {...register("password", { required: true })}
-            className='w-full bg-zinc-700 text-white px-4 py-2 my-2 rounded-md'
+            className='w-full bg-blue-100 px-4 py-2 my-2 rounded-md'
             placeholder='Password'
           />
           {errors.password && <p className='text-red-500'>Password is required</p>}
@@ -55,17 +63,20 @@ function LoginPage() {
           <div className='flex justify-between'>
             <button
               type='submit'
-              className='flex items-center justify-center text-green-500 px-3 py-1 my-3 rounded-sm border border-zinc-800'
+              className='bg-black flex items-center justify-center text-white px-3 py-1 my-3 rounded-sm'
+              style={{
+                backgroundColor: "#131921",
+              }}
             >
               {loading ? (
-                <ArrowPathIcon className="animate-spin h-5 w-5 text-green-500" />
+                <ArrowPathIcon className="animate-spin h-5 w-5 text-sky-500" />
               ) : (
                 "Login"
               )}
             </button>
             <Link
               to="/"
-              className='px-3 py-1 my-3 rounded-sm border border-zinc-800'
+              className='text-black px-3 py-1 my-3 rounded-sm'
             >
               Cancel
             </Link>
@@ -77,6 +88,7 @@ function LoginPage() {
         </p> */}
       </div>
     </div>
+
   );
 }
 
