@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Ocultar scrollbar en navegadores como Chrome, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ocultar scrollbar en Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Ocultar scrollbar en IE, Edge */
+*::-ms-scrollbar {
+  display: none;
+}
