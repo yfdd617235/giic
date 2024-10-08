@@ -133,19 +133,25 @@ function NavBar() {
 
   return (
     <nav
-      className={`bg-black fixed top-0 left-1/2 transform -translate-x-1/2 w-full py-0 z-50 print:hidden`}
+      className={`bg-black fixed left-1/2 transform -translate-x-1/2 w-full py-1 z-50 print:hidden`}
+      style={{
+        backgroundColor: "#131921",
+      }}
     >
       <div className="mr-2 flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           <Link to="/">
-            <div className="h-14 w-14 overflow-hidden">
+            <div className="h-10 w-10 overflow-hidden pt-2">
               <img
-                src={`${import.meta.env.BASE_URL}logoT.png`}
+                src={`${import.meta.env.BASE_URL}logo_giic_small.svg`}
                 alt="PPI"
                 className="h-full w-full object-cover object-center scale-125"
               />
             </div>
           </Link>
+          <div className="text-white">
+            <h1>Grande Ile International Corporation</h1>
+          </div>
         </div>
 
         <div className="flex items-center">

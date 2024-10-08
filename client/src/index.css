@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
-  color: white;
+  color: Black;
 }
 
 /* Ocultar scrollbar en navegadores como Chrome, Safari */
