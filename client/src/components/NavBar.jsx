@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import {
   ArrowRightOnRectangleIcon,
-  AdjustmentsHorizontalIcon,
+  ListBulletIcon,
   CurrencyDollarIcon,
   ArrowLeftOnRectangleIcon,
   UserPlusIcon,
   Bars3Icon
 } from "@heroicons/react/24/outline";
+import TaskTable from "../components/TaskTable"
 
 function NavBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,22 +31,22 @@ function NavBar() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
+//left-1/2 transform -translate-x-1/2
   return (
     <nav
-      className={`bg-black fixed left-1/2 transform -translate-x-1/2 w-full py-1 z-50 print:hidden`}
+      className={`bg-black fixed w-full z-50 print:hidden`}
       style={{
         backgroundColor: "#131921",
       }}
     >
-      <div className="mr-2 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+      <div className="m-2 flex items-center justify-between">
+        <div className="flex items-center gap-2">
           <Link to="/">
             <div className="h-10 w-10 overflow-hidden pt-2">
               <img
                 src={`${import.meta.env.BASE_URL}logo_giic_small.svg`}
                 alt="PPI"
-                className="h-full w-full object-cover object-center scale-125"
+                className="h-full w-full object-cover object-center scale-150"
               />
             </div>
           </Link>
@@ -56,7 +57,7 @@ function NavBar() {
 
         <div className="flex items-center">
           {isAuthenticated && (
-            <div className="text-sm text-sky-500 flex items-center flex-grow md:flex-grow-0 mx-4">
+            <div className="text-sm text-sky-300 flex items-center flex-grow md:flex-grow-0 mx-4">
               {user.username}
             </div>
           )}
@@ -81,17 +82,17 @@ function NavBar() {
                     to="/add-task"
                     className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
                   >
-                    <CurrencyDollarIcon className="h-5 w-5 text-white" />
+                    <CurrencyDollarIcon className="h-5 w-5 text-green-600" />
                     <span className="sr-only">Tasks</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/profile"
+                    to="/tasktable"
                     className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
                   >
-                    <AdjustmentsHorizontalIcon className="h-5 w-5 text-green-500" />
-                    <span className="sr-only">Profile</span>
+                    <ListBulletIcon className="h-5 w-5 text-white" />
+                    <span className="sr-only">TaskTable</span>
                   </Link>
                 </li>
                 {user.email === "panamerican.pi@gmail.com" && (
@@ -149,11 +150,11 @@ function NavBar() {
                   </li>
                   <li>
                     <Link
-                      to="/profile"
+                      to="/tasktable"
                       className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
                       onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
                     >
-                      <AdjustmentsHorizontalIcon className="h-5 w-5 text-green-600" />
+                      <ListBulletIcon className="h-5 w-5 text-white" />
                       <span className="sr-only">Profile</span>
                     </Link>
                   </li>

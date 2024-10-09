@@ -68,12 +68,12 @@ function TaskFormPage() {
       console.error('Error:', error);
     } finally {
       setLoading(false); // Detener el estado de loading después de que la tarea se haya creado o actualizado
-      navigate('/tasks');
+      navigate('/tasktable');
     }
   });
 
   return (
-    <div className='flex h-screen w-full items-center justify-center'
+    <div className='flex h-screen w-full items-center justify-center pt-32 lg:pt-0'
       style={{
         backgroundImage: `
     linear-gradient(rgba(183, 202, 253, 0.842), rgba(255, 255, 255)),
@@ -83,11 +83,11 @@ function TaskFormPage() {
         backgroundPosition: 'center center'
       }}>
 
-      <div className='flex flex-col mt-16 lg:flex-row gap-5 bg-blue-950 bg-opacity-20 w-full xl:w-3/4 lg:w-3/4 p-4 md:p-10 rounded-md shadow-md'>
+      <div className='flex flex-col lg:flex-row gap-5 bg-blue-950 bg-opacity-15 w-full xl:w-3/4 lg:w-3/4 p-2 md:p-10 rounded-md shadow-md mt-20'>
 
         {/* Columna izquierda para las instrucciones de pago */}
         <div className='flex flex-col justify-center items-center lg:w-1/2 w-full'>
-          <div className="p-2 rounded-lg">
+          <div className=" rounded-lg">
             <h1 className="text-lg md:text-xl font-bold mb-2">Payment Instructions</h1>
             <p className="mb-1">1. <strong>Scan the QR Code</strong>.</p>
             <p className="mb-1">2. <strong>Send Tether (USDT)</strong> via the <strong>TRON (TRC20)</strong> network.</p>
@@ -103,7 +103,7 @@ function TaskFormPage() {
             />
             
           </div>
-          <p className="text-center text-blue-800 mt-2">TCQsi5diGvf2Utp2ekHwzx2ShuviU1dow3</p>
+          <p className="text-center text-blue-800 font-bold mt-2">TCQsi5diGvf2Utp2ekHwzx2ShuviU1dow3</p>
         </div>
 
         {/* Columna derecha para el formulario de pago */}
@@ -163,10 +163,10 @@ function TaskFormPage() {
                 {loading ? (
                   <ArrowPathIcon className="animate-spin h-5 w-5 text-sky-500" />
                 ) : (
-                  "Save"
+                  "Submit"
                 )}
               </button>
-              <Link to="/tasks" className='px-3 py-1 my-3 rounded-sm'>
+              <Link to="/tasktable" className='px-3 py-1 my-3 rounded-sm'>
                 Cancel
               </Link>
             </div>

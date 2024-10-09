@@ -32,7 +32,7 @@ function LoginPage() {
         backgroundRepeat: 'no-repeat', // Evita la repetición vertical y horizontal
         backgroundPosition: 'center center' // Centra la imagen
       }}>
-      <div className='bg-blue-950 bg-opacity-20 max-w-md w-full p-10 rounded-md shadow-md'>
+      <div className='bg-blue-950 bg-opacity-15 max-w-md w-full p-10 rounded-md shadow-md'>
         {
           signinErrors.map((error, i) => (
             <div className='bg-red-500 p-2 text-white text-center my-2' key={i}>
@@ -47,7 +47,7 @@ function LoginPage() {
           <input
             type='email'
             {...register("email", { required: true })}
-            className='w-full bg-blue-100 px-4 py-2 my-2 rounded-md'
+            className='w-full px-4 py-2 my-2 rounded-md'
             placeholder='Email'
           />
           {errors.email && <p className='text-red-500'>Email is required</p>}
@@ -55,7 +55,7 @@ function LoginPage() {
           <input
             type='password'
             {...register("password", { required: true })}
-            className='w-full bg-blue-100 px-4 py-2 my-2 rounded-md'
+            className='w-full px-4 py-2 my-2 rounded-md'
             placeholder='Password'
           />
           {errors.password && <p className='text-red-500'>Password is required</p>}

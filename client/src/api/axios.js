@@ -6,7 +6,7 @@ import Cookies from 'js-cookie'; // Asegúrate de instalar 'js-cookie' si usas c
 
 // Definir las URLs de los servidores
 const LOCAL_URL = 'http://localhost:3000/api';
-//const PRODUCTION_URL = 'https://ppi-2-1.onrender.com/api';
+const PRODUCTION_URL = 'https://giic.onrender.com/api';
 
 // Crear la instancia de Axios
 const instance = axios.create({
