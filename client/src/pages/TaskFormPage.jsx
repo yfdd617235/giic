@@ -73,7 +73,7 @@ function TaskFormPage() {
   });
 
   return (
-    <div className='flex h-screen w-full items-center justify-center pt-32 lg:pt-0'
+    <div className='flex h-screen w-full items-center lg:justify-center pt-32 lg:pt-0'
       style={{
         backgroundImage: `
     linear-gradient(rgba(183, 202, 253, 0.842), rgba(255, 255, 255)),

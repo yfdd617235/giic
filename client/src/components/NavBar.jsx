@@ -34,7 +34,7 @@ function NavBar() {
 //left-1/2 transform -translate-x-1/2
   return (
     <nav
-      className={`bg-black fixed w-full z-50 print:hidden`}
+      className={`bg-black fixed w-screen z-50 print:hidden`}
       style={{
         backgroundColor: "#131921",
       }}

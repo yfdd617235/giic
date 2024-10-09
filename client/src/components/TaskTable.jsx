@@ -65,7 +65,7 @@
 //                             <th className="text-black px-2 py-1 text-sm sm:text-xs">Description</th>
 //                             <th className="text-black px-2 py-1 text-sm sm:text-xs">Status</th>
 //                             <th className="text-black px-2 py-1 text-sm sm:text-xs">Attachment</th>
-                            
+
 //                         </tr>
 //                     </thead>
 //                     <tbody>
@@ -90,7 +90,7 @@
 //                                         </a>
 //                                     )}
 //                                 </td>
-                                
+
 //                             </tr>
 //                         ))}
 //                     </tbody>
@@ -157,66 +157,68 @@ function TaskTable() {
         //         backgroundRepeat: 'no-repeat',
         //         backgroundPosition: 'center center'
         //     }}>
-        <div className="w-full h-full bg-blue-900 bg-opacity-15 pt-32 border border-red-700">
-        <div className="border border-yellow-600 lg:px-28">
-            <table className="lg:w-4/5 text-center">
-                <thead>
-                    <tr className="border-b border-black">
-                        <th className="text-black px-2 py-2 text-xs sm:text-sm">#</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Username</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Email</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Project ID</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Title</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Description</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Status</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Updated</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Actions</th>
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm">Attachment</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filteredTasks.map((task, index) => (
-                        <tr key={task._id} className="border-b border-black">
-                            <td className="text-black px-2 py-2 text-xs sm:text-sm">{index + 1}</td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.username}</td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.email}</td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.projectId}</td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.title}</td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.description}</td>
-                            <td className={`px-2 py-1 text-xs sm:text-sm 
-                                ${task.status === "Sent" ? "text-zinc-400" : ""} 
-                                ${task.status === "Rejected" ? "text-red-700" : ""} 
-                                ${task.status === "Accepted" ? "text-green-600 font-bold" : ""}`}>
-                                {task.status}
-                            </td>
-                            <td className="text-black px-2 py-1 text-xs sm:text-sm">
-                                {dayjs(task.updatedAt).tz("America/Bogota").format("DD/MMM/YYYY hh:mm:ss A")}
-                            </td>
-                            <td className="text-xs sm:text-sm ">
-                                <div className="flex gap-x-2 justify-center">
-                                    <Link to={`/tasks/${task._id}`} className="text-black">
-                                        <PencilIcon className="h-4 w-4" />
-                                    </Link>
-                                    <button onClick={() => handleDelete(task._id)} className="text-black">
-                                        <TrashIcon className="h-4 w-4" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className=" text-xs sm:text-sm ">
-                                {task.file && (
-                                    <a href={task.file} target="_blank" rel="noopener noreferrer" className="text-black flex justify-center space-x-1">
-                                        <PaperClipIcon className="h-4 w-4 text-sky-800" />
-                                        <span className="sr-only">Attachment</span>
-                                    </a>
-                                )}
-                            </td>
+        <div className="flex flex-col gap-3 w-full items-center px-1 bg-blue-100 overflow-x-auto pt-24 ">
+            <h1 className="font-bold">Payments history</h1>
+            <div className="max-w-full lg:max-w-screen-lg mx-auto lg:px-10 border">
+                <table className="min-w-full text-center">
+                    <thead>
+                        <tr className="border-b border-black">
+                            <th className="text-black px-2 py-2 text-xs sm:text-sm">#</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Username</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Email</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Project ID</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Title</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Description</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Status</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Updated</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Actions</th>
+                            <th className="text-black px-2 py-1 text-xs sm:text-sm">Attachment</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {filteredTasks.map((task, index) => (
+                            <tr key={task._id} className="border-b border-blue-300">
+                                <td className="text-black px-2 py-2 text-xs sm:text-sm">{index + 1}</td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.username}</td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.email}</td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.projectId}</td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.title}</td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">{task.description}</td>
+                                <td className={`px-2 py-1 text-xs sm:text-sm 
+                            ${task.status === "Sent" ? "text-zinc-400" : ""} 
+                            ${task.status === "Rejected" ? "text-red-700" : ""} 
+                            ${task.status === "Accepted" ? "text-green-600 font-bold" : ""}`}>
+                                    {task.status}
+                                </td>
+                                <td className="text-black px-2 py-1 text-xs sm:text-sm">
+                                    {dayjs(task.updatedAt).tz("America/Bogota").format("DD/MMM/YYYY hh:mm:ss A")}
+                                </td>
+                                <td className="text-xs sm:text-sm">
+                                    <div className="flex gap-x-2 justify-center">
+                                        <Link to={`/tasks/${task._id}`} className="text-black">
+                                            <PencilIcon className="h-4 w-4" />
+                                        </Link>
+                                        <button onClick={() => handleDelete(task._id)} className="text-black">
+                                            <TrashIcon className="h-4 w-4" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td className="text-xs sm:text-sm">
+                                    {task.file && (
+                                        <a href={task.file} target="_blank" rel="noopener noreferrer" className="text-black flex justify-center space-x-1">
+                                            <PaperClipIcon className="h-4 w-4 text-sky-800" />
+                                            <span className="sr-only">Attachment</span>
+                                        </a>
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    
+
+
         // </div>
     );
 }
