@@ -8,6 +8,7 @@ import Cookies from 'js-cookie'; // Asegúrate de instalar 'js-cookie' si usas c
 const LOCAL_URL = 'http://localhost:3000/api';
 const PRODUCTION_URL = 'https://giic.onrender.com/api';
 
+
 // Crear la instancia de Axios
 const instance = axios.create({
   withCredentials: true, // Permitir el uso de cookies en solicitudes
