@@ -11,7 +11,7 @@ const Projects = () => {
       <div>
         <img
           src={`${import.meta.env.BASE_URL}Project_schedule.jpeg`}
-          alt="PPI"
+          alt="GIIC"
           className="h-full w-full object-cover object-center"
         />
       </div>

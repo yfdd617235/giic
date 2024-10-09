@@ -123,9 +123,10 @@ function TaskTable() {
         async function fetchTasks() {
             await getTasks();
             setLoading(false);
+            console.log(tasks)
         }
         fetchTasks();
-    }, [getTasks]);
+    }, []);
 
     const filteredTasks = loading
         ? []

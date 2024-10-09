@@ -98,7 +98,7 @@ function TaskFormPage() {
           <div className="h-40 w-40 lg:h-60 lg:w-60 overflow-hidden pt-2 flex flex-col items-center">
             <img
               src={`${import.meta.env.BASE_URL}trustwalletYosef.jpeg`}
-              alt="PPI"
+              alt="GIIC"
               className="h-full w-full object-cover object-center"
             />
             

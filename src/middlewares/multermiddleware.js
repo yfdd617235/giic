@@ -86,7 +86,7 @@ export const uploadFileToCloudinary = (file) => {
       {
         resource_type: 'auto',  // Permitir cualquier tipo de archivo (zip, pdf, etc.)
         public_id: `${sanitizedFileName}_${uniqueSuffix}`,  // Nombre único para evitar reemplazos
-        folder: 'giic',  // Guardar el archivo en la carpeta 'ppi'
+        folder: 'giic',  // Guardar el archivo en la carpeta 'giic'
         format: getFileFormat(file),  // Establece el formato del archivo
       },
       (error, result) => {

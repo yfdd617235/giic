@@ -45,7 +45,7 @@ function NavBar() {
             <div className="h-10 w-10 overflow-hidden pt-2">
               <img
                 src={`${import.meta.env.BASE_URL}logo_giic_small.svg`}
-                alt="PPI"
+                alt="GIIC"
                 className="h-full w-full object-cover object-center scale-150"
               />
             </div>

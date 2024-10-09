@@ -104,7 +104,7 @@ function ProfilePage() {
             <div className="h-14 w-14 overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}logo.svg`}
-                alt="PPI"
+                alt="GIIC"
                 className="h-full w-full object-cover object-center scale-125 "
               />
             </div>
