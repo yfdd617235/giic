@@ -83,7 +83,7 @@ function TaskFormPage() {
         backgroundPosition: 'center center'
       }}>
 
-      <div className='flex flex-col lg:flex-row gap-5 bg-blue-950 bg-opacity-20 w-full lg:w-3/4 p-4 md:p-10 rounded-md shadow-md'>
+      <div className='flex flex-col mt-16 lg:flex-row gap-5 bg-blue-950 bg-opacity-20 w-full xl:w-3/4 lg:w-3/4 p-4 md:p-10 rounded-md shadow-md'>
 
         {/* Columna izquierda para las instrucciones de pago */}
         <div className='flex flex-col justify-center items-center lg:w-1/2 w-full'>
