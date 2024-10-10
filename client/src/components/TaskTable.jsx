@@ -6,7 +6,7 @@ import { ADMIN } from "../projects"
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
-import { ArrowPathIcon, PaperClipIcon, PencilIcon, TrashIcon, FolderArrowDownIcon } from '@heroicons/react/24/outline';
+import { ArrowPathIcon, PaperClipIcon, PencilIcon, PencilSquareIcon, TrashIcon, XCircleIcon, FolderArrowDownIcon } from '@heroicons/react/24/outline';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -52,7 +52,7 @@ function TaskTable() {
 
                 <thead className="">
                     <tr className="border-b border-black">
-                        <th className="text-black px-2 py-1 text-xs sm:text-sm"><FolderArrowDownIcon className="h-4 w-4 text-sky-700" /></th>
+                        <th className="text-black px-2 py-1 text-xs sm:text-sm"><FolderArrowDownIcon className="h-4 w-4 text-sky-800" /></th>
                         <th className="text-black px-2 py-2 text-xs sm:text-sm">#</th>
                         {/* <th className="text-black px-2 py-1 text-xs sm:text-sm">Username</th>
                         <th className="text-black px-2 py-1 text-xs sm:text-sm">Email</th> */}
@@ -72,7 +72,7 @@ function TaskTable() {
                             <td className="text-xs sm:text-sm">
                                 {task.file && (
                                     <a href={task.file} target="_blank" rel="noopener noreferrer" className="text-black flex justify-center">
-                                        <PaperClipIcon className="h-4 w-4 text-sky-700" />
+                                        <PaperClipIcon className="h-5 w-5 text-sky-800" />
                                         <span className="sr-only">Attachment</span> {/* Texto oculto solo para lectores de pantalla */}
                                     </a>
                                 )}
@@ -83,9 +83,9 @@ function TaskTable() {
                             <td className="px-2 py-1 text-sm sm:text-xs">{task.projectId}</td>
                             <td className="px-2 py-1 text-sm sm:text-xs">{task.title}</td>
                             <td className="px-2 py-1 text-sm sm:text-xs">{task.description} <strong>USD</strong></td>
-                            <td className={`px-2 py-1 text-sm sm:text-xs ${task.status === "Sent" ? "text-zinc-400" : ""} 
-                                ${task.status === "Rejected" ? "text-red-700" : ""} 
-                                ${task.status === "Accepted" ? "text-green-600" : ""}`}>
+                            <td className={`px-2 py-1 text-sm sm:text-xs ${task.status === "Sent" ? "text-zinc-500" : ""} 
+                                ${task.status === "Rejected" ? "text-red-600 font-bold" : ""} 
+                                ${task.status === "Accepted" ? "text-green-600 font-bold" : ""}`}>
                                 {task.status}
                             </td>
                             <td className="text-black px-2 py-1 text-sm sm:text-xs">
@@ -94,11 +94,11 @@ function TaskTable() {
 
                             <td className="text-xs sm:text-sm">
                                 <div className="flex gap-x-3 justify-center">
-                                    <Link to={`/tasks/${task._id}`} className="text-black">
-                                        <PencilIcon className="h-4 w-4 text-zinc-500" />
+                                    <Link to={`/tasks/${task._id}`} className="">
+                                        <PencilSquareIcon className="h-4 w-4 text-zinc-700" />
                                     </Link>
-                                    <button onClick={() => handleDelete(task._id)} className="text-black">
-                                        <TrashIcon className="h-4 w-4 text-red-500" />
+                                    <button onClick={() => handleDelete(task._id)} className="">
+                                        <XCircleIcon className="h-4 w-4 text-red-600 " />
                                     </button>
                                 </div>
                             </td>
