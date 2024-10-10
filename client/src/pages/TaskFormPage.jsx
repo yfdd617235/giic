@@ -7,9 +7,7 @@ import utc from 'dayjs/plugin/utc';
 import { useAuth } from '../context/AuthContext'; // Importa el contexto de autenticación
 import { ArrowPathIcon } from '@heroicons/react/24/outline'; // Importar el ícono de carga
 dayjs.extend(utc);
-
-// Importa la lista de proyectos
-import { projectList } from '../projects';
+import { projectList, ADMIN } from '../projects';
 
 function TaskFormPage() {
   const { register, handleSubmit, setValue } = useForm();
@@ -112,17 +110,18 @@ function TaskFormPage() {
           <form onSubmit={onSubmit} encType="multipart/form-data">
             <input
               type="text"
-              placeholder='Title'
+              placeholder='Client'
               {...register('title')}
               className='w-full px-4 py-2 rounded-md my-2'
               autoFocus
             />
-            <textarea
-              rows="3"
-              placeholder='Description'
+            <input
+              type="number"
+              placeholder='Amount'
               {...register('description')}
               className='w-full px-4 py-2 rounded-md my-2'
-            ></textarea>
+              autoFocus
+            />
             <input
               type="file"
               {...register('file')}
@@ -141,8 +140,8 @@ function TaskFormPage() {
               ))}
             </select>
 
-            {/* Mostrar el campo de status solo si el usuario es "panamerican.pi@gmail.com" */}
-            {user.email === 'panamerican.pi@gmail.com' && (
+            {/* Mostrar el campo de status solo si el usuario es ADMIN */}
+            {user.email === ADMIN && (
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}

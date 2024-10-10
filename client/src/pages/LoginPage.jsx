@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowPathIcon } from '@heroicons/react/24/outline'; // Importar el ícono de carga
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 
 function LoginPage() {
   const { register, handleSubmit, formState: { errors }, } = useForm();

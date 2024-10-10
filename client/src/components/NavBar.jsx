@@ -7,9 +7,10 @@ import {
   CurrencyDollarIcon,
   ArrowLeftOnRectangleIcon,
   UserPlusIcon,
-  Bars3Icon
+  Bars3Icon,
+  CreditCardIcon
 } from "@heroicons/react/24/outline";
-import TaskTable from "../components/TaskTable"
+import {ADMIN} from "../projects"
 
 function NavBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,7 +58,7 @@ function NavBar() {
 
         <div className="flex items-center">
           {isAuthenticated && (
-            <div className="text-sm text-sky-300 flex items-center flex-grow md:flex-grow-0 mx-4">
+            <div className="text-sm text-sky-200 flex items-center flex-grow md:flex-grow-0 mx-4">
               {user.username}
             </div>
           )}
@@ -82,7 +83,7 @@ function NavBar() {
                     to="/add-task"
                     className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
                   >
-                    <CurrencyDollarIcon className="h-5 w-5 text-green-600" />
+                    <CreditCardIcon className="h-5 w-5 text-white" />
                     <span className="sr-only">Tasks</span>
                   </Link>
                 </li>
@@ -95,7 +96,7 @@ function NavBar() {
                     <span className="sr-only">TaskTable</span>
                   </Link>
                 </li>
-                {user.email === "panamerican.pi@gmail.com" && (
+                {user.email === ADMIN && (
                   <li>
                     <Link
                       to="/register"
@@ -144,7 +145,7 @@ function NavBar() {
                       className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
                       onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
                     >
-                      <CurrencyDollarIcon className="h-5 w-5 text-white" />
+                      <CreditCardIcon className="h-5 w-5 text-white" />
                       <span className="sr-only">Tasks</span>
                     </Link>
                   </li>
@@ -158,7 +159,7 @@ function NavBar() {
                       <span className="sr-only">Profile</span>
                     </Link>
                   </li>
-                  {user.email === "panamerican.pi@gmail.com" && (
+                  {user.email === ADMIN && (
                     <li>
                       <Link
                         to="/register"

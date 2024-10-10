@@ -1,7 +1,9 @@
 export const projectList = [
-    "PPI-001-2024",
-    "PPI-002-2024",
-    "PPI-003-2024",
-    "PPI-004-2024",
-    "PPI-005-2024"
+    "GIIC-001-2024",
+    "GIIC-002-2024",
+    "GIIC-003-2024",
+    "GIIC-004-2024",
+    "GIIC-005-2024"
   ];
+
+export const ADMIN = "director@grandeileinternational.com"

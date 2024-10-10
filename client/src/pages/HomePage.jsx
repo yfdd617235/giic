@@ -126,7 +126,7 @@ const HomaPage = () => {
                 British Virgin Islands
                 </p>
                 <a
-                  href="mailto:panamerican.pi@gmail.com"
+                  href="mailto:director@grandeileinternational.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-xs md:text-sm"
