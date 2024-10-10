@@ -4,7 +4,6 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import TasksPage from "./pages/TasksPage";
 import TaskFormPage from "./pages/TaskFormPage";
-import TaskTable from "./components/TaskTable"
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./ProtectedRoute";
@@ -29,7 +28,6 @@ function App() {
                 <Route path="/add-task" element={<TaskFormPage />} />
                 <Route path="/tasks/:id" element={<TaskFormPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
-                <Route path="/tasktable" element={<TaskTable />} />
               </Route>
               <Route path="*" element={<h1>404 - Page Not Found</h1>} />
             </Routes>

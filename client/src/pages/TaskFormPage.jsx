@@ -68,12 +68,12 @@ function TaskFormPage() {
       console.error('Error:', error);
     } finally {
       setLoading(false); // Detener el estado de loading después de que la tarea se haya creado o actualizado
-      navigate('/tasktable');
+      navigate('/profile');
     }
   });
 
   return (
-    <div className='flex h-screen w-full items-center lg:justify-center pt-32 lg:pt-0'
+    <div className='flex h-screen w-full lg:items-center justify-center lg:pt-0'
       style={{
         backgroundImage: `
     linear-gradient(rgba(183, 202, 253, 0.842), rgba(255, 255, 255)),
@@ -83,17 +83,17 @@ function TaskFormPage() {
         backgroundPosition: 'center center'
       }}>
 
-      <div className='flex flex-col lg:flex-row gap-5 bg-blue-950 bg-opacity-15 w-full xl:w-3/4 lg:w-3/4 p-2 md:p-10 rounded-md shadow-md mt-20'>
+      <div className='flex flex-col lg:flex-row gap-5 bg-white bg-opacity-35 w-full xl:w-3/4 lg:w-3/4 p-6 md:p-10 rounded-md shadow-lg mt-20'>
 
         {/* Columna izquierda para las instrucciones de pago */}
         <div className='flex flex-col justify-center items-center lg:w-1/2 w-full'>
           <div className=" rounded-lg">
-            <h1 className="text-lg md:text-xl font-bold mb-2">Payment Instructions</h1>
-            <p className="mb-1">1. <strong>Scan the QR Code</strong>.</p>
-            <p className="mb-1">2. <strong>Send Tether (USDT)</strong> via the <strong>TRON (TRC20)</strong> network.</p>
-            <p className="mb-1">3. <strong>Take a screenshot</strong> of the payment confirmation.</p>
-            <p className="mb-1">4. <strong>Fill in your name</strong> and <strong>contract title</strong>.</p>
-            <p className="mb-1">5. <strong>Upload the screenshot</strong> and <strong>submit</strong> the form.</p>
+            <h1 className="md:text-xl font-bold mb-2">Payment Instructions</h1>
+            <p className="mb-1 text-sm">1. <strong>Scan the QR Code</strong>.</p>
+            <p className="mb-1 text-sm">2. <strong>Send Tether (USDT)</strong> via the <strong>TRON (TRC20)</strong> network.</p>
+            <p className="mb-1 text-sm">3. <strong>Take a screenshot</strong> of the payment confirmation.</p>
+            <p className="mb-1 text-sm">4. <strong>Fill in your name</strong> and <strong>contract title</strong>.</p>
+            <p className="mb-1 text-sm">5. <strong>Upload the screenshot</strong> and <strong>submit</strong> the form.</p>
           </div>
           <div className="h-40 w-40 lg:h-60 lg:w-60 overflow-hidden pt-2 flex flex-col items-center">
             <img
@@ -166,7 +166,7 @@ function TaskFormPage() {
                   "Submit"
                 )}
               </button>
-              <Link to="/tasktable" className='px-3 py-1 my-3 rounded-sm'>
+              <Link to="/profile" className='px-3 py-1 my-3 rounded-sm'>
                 Cancel
               </Link>
             </div>

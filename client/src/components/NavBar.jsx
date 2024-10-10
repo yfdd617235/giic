@@ -34,7 +34,7 @@ function NavBar() {
 //left-1/2 transform -translate-x-1/2
   return (
     <nav
-      className={`bg-black fixed w-screen z-50 print:hidden`}
+      className={`bg-black fixed z-50 w-screen print:hidden`}
       style={{
         backgroundColor: "#131921",
       }}
@@ -50,7 +50,7 @@ function NavBar() {
               />
             </div>
           </Link>
-          <div className="text-white">
+          <div className="text-white hidden md:block">
             <h1>Grande Ile International Corporation</h1>
           </div>
         </div>
@@ -88,7 +88,7 @@ function NavBar() {
                 </li>
                 <li>
                   <Link
-                    to="/tasktable"
+                    to="/profile"
                     className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
                   >
                     <ListBulletIcon className="h-5 w-5 text-white" />
@@ -150,7 +150,7 @@ function NavBar() {
                   </li>
                   <li>
                     <Link
-                      to="/tasktable"
+                      to="/profile"
                       className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
                       onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
                     >

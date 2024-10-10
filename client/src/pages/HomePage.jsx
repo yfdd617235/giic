@@ -25,7 +25,7 @@ const HomaPage = () => {
         }}
       >
         <img
-          className="max-w-full max-h-full lg:p-32"
+          className="max-w-full max-h-full lg:p-32 pl-3"
           src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
           alt="Logo"
         />

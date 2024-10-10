@@ -32,7 +32,7 @@ function LoginPage() {
         backgroundRepeat: 'no-repeat', // Evita la repetición vertical y horizontal
         backgroundPosition: 'center center' // Centra la imagen
       }}>
-      <div className='bg-blue-950 bg-opacity-15 max-w-md w-full p-10 rounded-md shadow-md'>
+      <div className='bg-white bg-opacity-35 max-w-md w-full p-10 rounded-md shadow-lg'>
         {
           signinErrors.map((error, i) => (
             <div className='bg-red-500 p-2 text-white text-center my-2' key={i}>
