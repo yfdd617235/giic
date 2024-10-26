@@ -45,9 +45,9 @@ const HomaPage = () => {
               <h5 className="text-base md:text-xl font-semibold">CONSULTING</h5>
               <br />
               <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Projects Structuring</p>
-                <p className="text-xs md:text-sm">- Evaluation and Valuation of companies and projects</p>
-                <p className="text-xs md:text-sm">- Networking, Startups and angel investors</p>
+                <p className="text-xs md:text-lg">- Projects Structuring</p>
+                <p className="text-xs md:text-lg">- Evaluation and Valuation of companies and projects</p>
+                <p className="text-xs md:text-lg">- Networking, Startups and angel investors</p>
               </div>
             </div>
           </div>
@@ -63,10 +63,10 @@ const HomaPage = () => {
               <h5 className="text-base md:text-xl font-semibold">INVESTMENTS</h5>
               <br />
               <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Leverage for Environmental Investments</p>
-                <p className="text-xs md:text-sm">- Financial arbitraje with licensed entities</p>
-                <p className="text-xs md:text-sm">- International Commerce (Food and other commodities)</p>
-                <p className="text-xs md:text-sm">- Algorithmic trading and market analysis Software</p>
+                <p className="text-xs md:text-lg">- Leverage for Environmental Investments</p>
+                <p className="text-xs md:text-lg">- Financial arbitraje with licensed entities</p>
+                <p className="text-xs md:text-lg">- International Commerce (Food and other commodities)</p>
+                <p className="text-xs md:text-lg">- Algorithmic trading and market analysis Software</p>
               </div>
             </div>
           </div>
@@ -84,9 +84,9 @@ const HomaPage = () => {
               </h5>
               <br />
               <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Structuring</p>
-                <p className="text-xs md:text-sm">- Implementation, support and management</p>
-                <p className="text-xs md:text-sm">- Promotion and marketing for fundraising</p>
+                <p className="text-xs md:text-lg">- Structuring</p>
+                <p className="text-xs md:text-lg">- Implementation, support and management</p>
+                <p className="text-xs md:text-lg">- Promotion and marketing for fundraising</p>
               </div>
             </div>
           </div>
@@ -113,15 +113,15 @@ const HomaPage = () => {
             <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
                 <h5 className="text-xs md:text-sm lg:text-lg font-bold">Services</h5> <br />
-                <p className="text-xs md:text-sm ">- Financial Consulting</p>
-                <p className="text-xs md:text-sm ">- Investments</p>
-                <p className="text-xs md:text-sm ">- Sustainable Development Goals Projects (SDG)</p>
+                <p className="text-xs md:text-lg ">- Financial Consulting</p>
+                <p className="text-xs md:text-lg ">- Investments</p>
+                <p className="text-xs md:text-lg ">- Sustainable Development Goals Projects (SDG)</p>
               </div>
             </div>
             <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
-                <h5 className="text-xs md:text-sm lg:text-lg font-bold">Contact Us</h5> <br />
-                <p className="text-xs md:text-sm ">
+                <h5 className="text-xs md:text-lg lg:text-lg font-bold">Contact Us</h5> <br />
+                <p className="text-xs md:text-lg ">
                 Address: Intershore Chambers, Road Town, Tortola <br />
                 British Virgin Islands
                 </p>
@@ -132,7 +132,7 @@ const HomaPage = () => {
                   className="flex items-center space-x-2 text-xs md:text-sm"
                 >
                   <EnvelopeIcon className="w-4 h-4 " /> {/* Ícono de Heroicons v2 */}
-                  <span>director@grandeileinternational.com</span>
+                  <span className="text-xs md:text-lg">director@grandeileinternational.com</span>
                 </a>
               </div>
             </div>
