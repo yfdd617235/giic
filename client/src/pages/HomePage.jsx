@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
+import Loader from '../components/Loader';
 import { wakeUpServer } from '../api/axios'; // Importa la función wakeUpServer
 
 const HomaPage = () => {
@@ -9,10 +10,28 @@ const HomaPage = () => {
     wakeUpServer();
   }, []); // Solo se ejecuta una vez al montar el componente
 
+  const [loading, setLoading] = useState(true);
+  const [elementsToLoad, setElementsToLoad] = useState(1); // Ajusta según la cantidad total de elementos multimedia
+
+  // Maneja la carga de cada elemento
+  const handleLoad = () => {
+    console.log("Video loaded"); // Confirmar que el manejador se llama
+    setElementsToLoad((prev) => {
+      console.log("Elements to load:", prev - 1); // Verificar el conteo
+      return prev - 1;
+    });
+  };
+
+  // Efecto para ocultar el loader cuando se han cargado todos los elementos
+  useEffect(() => {
+    if (elementsToLoad <= 0) {
+      setLoading(false);
+    }
+  }, [elementsToLoad]); // Agregar como dependencia
 
   return (
     <div className="flex flex-col pt-10">
-      {/* Jumbotron Section */}
+
       <div
         className="h-screen w-full bg-center flex justify-center items-center"
         style={{
@@ -24,6 +43,37 @@ const HomaPage = () => {
           backgroundPosition: 'center center' // Centra la imagen
         }}
       >
+        <img
+          className="max-w-full max-h-full lg:p-32 pl-3"
+          src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
+          alt="Logo"
+        />
+      </div>
+
+      <div className="z-50">
+        {loading && (
+          <Loader />
+        )}
+      </div>
+
+      <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+          src={`${import.meta.env.BASE_URL}buildsky.mp4`}
+          poster={`${import.meta.env.BASE_URL}building.png`}
+          muted
+          autoPlay
+          loop
+          playsInline
+          onLoadedData={handleLoad} // Se dispara cuando el video comienza a reproducirse
+          onError={(e) => {
+            console.error("Video failed to load", e); // Manejo de errores
+            e.target.style.display = 'none';
+          }}
+        >Your browser does not support the video tag.</video>
+
+        {/* Fondo negro con opacidad */}
+        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50 -z-10" />       
         <img
           className="max-w-full max-h-full lg:p-32 pl-3"
           src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
@@ -122,8 +172,8 @@ const HomaPage = () => {
               <div className="flex flex-col space-y-3 text-left">
                 <h5 className="text-xs md:text-lg lg:text-lg font-bold">Contact Us</h5> <br />
                 <p className="text-xs md:text-lg ">
-                Address: Intershore Chambers, Road Town, Tortola <br />
-                British Virgin Islands
+                  Address: Intershore Chambers, Road Town, Tortola <br />
+                  British Virgin Islands
                 </p>
                 <a
                   href="mailto:director@grandeileinternational.com"
