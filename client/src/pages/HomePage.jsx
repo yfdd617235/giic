@@ -59,7 +59,7 @@ const HomaPage = () => {
       <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-          src={`${import.meta.env.BASE_URL}buildsky.mp4`}
+          src={`${import.meta.env.BASE_URL}ejecutivo.mp4`}
           poster={`${import.meta.env.BASE_URL}building.png`}
           muted
           autoPlay
@@ -80,6 +80,33 @@ const HomaPage = () => {
           alt="Logo"
         />
       </div>
+
+
+      <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+          src={`${import.meta.env.BASE_URL}ejecutivo.mp4`}
+          poster={`${import.meta.env.BASE_URL}building.png`}
+          muted
+          autoPlay
+          loop
+          playsInline
+          onLoadedData={handleLoad} // Se dispara cuando el video comienza a reproducirse
+          onError={(e) => {
+            console.error("Video failed to load", e); // Manejo de errores
+            e.target.style.display = 'none';
+          }}
+        >Your browser does not support the video tag.</video>
+
+        {/* Fondo negro con opacidad */}
+        <div className="absolute top-0 left-0 w-full h-full bg-blue-950 opacity-30 -z-10" />       
+        <img
+          className="max-w-full max-h-full lg:p-32 pl-3"
+          src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
+          alt="Logo"
+        />
+      </div>
+
 
       {/* Cards Section */}
       <div className="container mx-auto my-8 px-4 md:px-10">
