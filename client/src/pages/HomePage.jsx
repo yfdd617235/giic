@@ -32,7 +32,7 @@ const HomaPage = () => {
   return (
     <div className="flex flex-col pt-10">
 
-      <div
+      {/* <div
         className="h-screen w-full bg-center flex justify-center items-center"
         style={{
           backgroundImage: `
@@ -48,7 +48,7 @@ const HomaPage = () => {
           src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
           alt="Logo"
         />
-      </div>
+      </div> */}
 
       <div className="z-50">
         {loading && (
@@ -60,7 +60,7 @@ const HomaPage = () => {
         <video
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
           src={`${import.meta.env.BASE_URL}ejecutivo.mp4`}
-          poster={`${import.meta.env.BASE_URL}building.png`}
+          poster={`${import.meta.env.BASE_URL}ejecutivo.png`}
           muted
           autoPlay
           loop
@@ -71,45 +71,20 @@ const HomaPage = () => {
             e.target.style.display = 'none';
           }}
         >Your browser does not support the video tag.</video>
-
         {/* Fondo negro con opacidad */}
-        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50 -z-10" />       
-        <img
-          className="max-w-full max-h-full lg:p-32 pl-3"
-          src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
-          alt="Logo"
-        />
-      </div>
+        <div className="absolute inset-0 bg-blue-950 opacity-30 -z-10" />
 
-
-      <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-          src={`${import.meta.env.BASE_URL}ejecutivo.mp4`}
-          poster={`${import.meta.env.BASE_URL}building.png`}
-          muted
-          autoPlay
-          loop
-          playsInline
-          onLoadedData={handleLoad} // Se dispara cuando el video comienza a reproducirse
-          onError={(e) => {
-            console.error("Video failed to load", e); // Manejo de errores
-            e.target.style.display = 'none';
-          }}
-        >Your browser does not support the video tag.</video>
-
-        {/* Fondo negro con opacidad */}
-        <div className="absolute top-0 left-0 w-full h-full bg-blue-950 opacity-30 -z-10" />       
-        <img
-          className="max-w-full max-h-full lg:p-32 pl-3"
-          src={`${import.meta.env.BASE_URL}logo_giic_big.svg`}
-          alt="Logo"
-        />
-      </div>
+  {/* Imagen centrada */}
+  <img
+    className="max-w-full max-h-full p-3 lg:pt-40"
+    src={`${import.meta.env.BASE_URL}logo_giic.svg`}
+    alt="Logo"
+  />
+</div>
 
 
       {/* Cards Section */}
-      <div className="container mx-auto my-8 px-4 md:px-10">
+      <div className="container mx-auto my-8 px-4 md:px-10 pt-40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Card 1 */}
           <div className="h-full shadow-md border border-zinc-600 rounded-lg">
