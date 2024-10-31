@@ -72,11 +72,11 @@ const HomaPage = () => {
           }}
         >Your browser does not support the video tag.</video>
         {/* Fondo negro con opacidad */}
-        <div className="absolute inset-0 bg-blue-950 opacity-30 -z-10" />
+        <div className="absolute inset-0 bg-blue-950 opacity-35 -z-10" />
 
   {/* Imagen centrada */}
   <img
-    className="relative z-10 max-w-full px-20 h-2/5"
+    className="relative z-10 max-w-full px-24 h-2/5"
     src={`${import.meta.env.BASE_URL}logo_giic.svg`}
     alt="Logo"
   />
