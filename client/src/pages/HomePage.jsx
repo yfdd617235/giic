@@ -76,7 +76,7 @@ const HomaPage = () => {
 
   {/* Imagen centrada */}
   <img
-    className="relative z-10 max-w-full px-16 h-2/5 border"
+    className="relative z-10 max-w-full px-20 h-2/5"
     src={`${import.meta.env.BASE_URL}logo_giic.svg`}
     alt="Logo"
   />
