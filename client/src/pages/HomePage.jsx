@@ -8,7 +8,7 @@ const HomaPage = () => {
   useEffect(() => {
     // Llamada para despertar el servidor cuando la página cargue
     wakeUpServer();
-  }, []); // Solo se ejecuta una vez al montar el componente
+  },[]); // Solo se ejecuta una vez al montar el componente
 
   const [loading, setLoading] = useState(true);
   const [elementsToLoad, setElementsToLoad] = useState(1); // Ajusta según la cantidad total de elementos multimedia
