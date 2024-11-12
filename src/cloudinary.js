@@ -8,4 +8,5 @@ cloudinary.config({
 
 export default cloudinary;
 
+
 //API environment variable CLOUDINARY_URL=cloudinary://361948127564474:DESC5XY0aWyIw-7GwEYtT4pwN6g@dopqozfgb
