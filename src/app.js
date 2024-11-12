@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
-    origin: ['https://yfdd617235.github.io', 'http://localhost:5173', 'https://www.grandeileinternational.com'],
+    origin: ['https://yfdd617235.github.io', 'http://localhost:5173', 'https://www.grandeileinternational.com', 'https://grandeileinternational.com'],
     credentials: true,
 }));
 
