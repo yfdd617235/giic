@@ -8,7 +8,7 @@ const HomaPage = () => {
   useEffect(() => {
     // Llamada para despertar el servidor cuando la página cargue
     wakeUpServer();
-  },[]); // Solo se ejecuta una vez al montar el componente
+  }, []); // Solo se ejecuta una vez al montar el componente
 
   const [loading, setLoading] = useState(true);
   const [elementsToLoad, setElementsToLoad] = useState(1); // Ajusta según la cantidad total de elementos multimedia
@@ -74,19 +74,19 @@ const HomaPage = () => {
         {/* Fondo negro con opacidad */}
         <div className="absolute inset-0 bg-blue-950 opacity-35 -z-10" />
 
-  {/* Imagen centrada */}
-  <img
-    className="relative z-10 max-w-full px-24 h-2/5"
-    src={`${import.meta.env.BASE_URL}logo_giic.svg`}
-    alt="Logo"
-  />
-</div>
+        {/* Imagen centrada */}
+        <img
+          className="relative z-10 max-w-full px-24 h-2/5"
+          src={`${import.meta.env.BASE_URL}logo_giic.svg`}
+          alt="Logo"
+        />
+      </div>
 
 
       {/* Cards Section */}
-      <div className="container mx-auto my-8 px-4 md:px-10 pt-40">
+      {/* <div className="container mx-auto my-8 px-4 md:px-10 pt-40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {/* Card 1 */}
+        
           <div className="h-full shadow-md border border-zinc-600 rounded-lg">
             <img
               src={`${import.meta.env.BASE_URL}contrato.jpg`}
@@ -104,7 +104,7 @@ const HomaPage = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
+       
           <div className="h-full shadow-md border border-zinc-600 rounded-lg">
             <img
               src={`${import.meta.env.BASE_URL}computer.jpg`}
@@ -123,7 +123,7 @@ const HomaPage = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
+       
           <div className="h-full shadow-md border border-zinc-600 rounded-lg">
             <img
               src={`${import.meta.env.BASE_URL}project.jpg`}
@@ -141,6 +141,63 @@ const HomaPage = () => {
                 <p className="text-xs md:text-lg">- Promotion and marketing for fundraising</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div> */}
+
+
+      {/*About us*/}
+      <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
+        <div className="text-white" style={{ backgroundColor: "#131921" }}>
+          <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 lg:px-20">
+
+            <div className="md:w-1/2 pt-10 md:py-10">
+              <h2 className="md:text-2xl font-bold text-center">About Us</h2> <br />
+              <div className="flex flex-col space-y-3 text-left">
+                <p className="text-xs md:text-lg text-justify">We are committed to supporting businesses and projects with expert structuring and management. Our services include precise evaluation and valuation, and hands-on implementation support. Additionally, we provide targeted promotion and marketing strategies, helping each project reach its full potential. Our mission is to drive growth and establish a solid foundation for lasting success.</p>
+              </div>
+            </div>
+
+            <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center bg-blue-900 opacity-50">
+              <video
+                className="w-full h-full object-cover"
+                src={`${import.meta.env.BASE_URL}presentation.mp4`}
+                poster={`${import.meta.env.BASE_URL}presentation.png`}
+                muted
+                autoPlay
+                loop
+                playsInline
+                onError={(e) => {
+                  console.error("Video failed to load", e); // Manejo de errores
+                  e.target.style.display = 'none';
+                }}
+              >Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        {/*Mision & Vision*/}
+        <div className="bg-gradient-to-b from-white to-gray-100">
+          <div className="container gap-10 flex flex-col md:flex-row justify-center md:items-center mx-auto px-4 lg:px-20">
+
+            <div className="md:w-2/3 pt-10 md:py-10">
+              <h2 className="font-bold md:text-xl">CONSULTING</h2><br />
+              <p className="text-xs md:text-lg">- Projects Structuring</p>
+              <p className="text-xs md:text-lg">- Evaluation and Valuation of companies and projects</p>
+              <p className="text-xs md:text-lg">- Networking, Startups and angel investors</p>
+            </div>
+
+            {/* Barra divisoria */}
+            <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+            <div className="md:w-2/3 pb-10 md:py-10">
+              <h2 className="font-bold md:text-xl">SUSTAINABILITY PROJECTS</h2> <br />
+              <p className="text-xs md:text-lg">- Implementation, support and management</p>
+              <p className="text-xs md:text-lg">- Promotion and marketing for fundraising</p>
+              <p className="text-xs md:text-lg">- Strategic Partnerships</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -162,14 +219,14 @@ const HomaPage = () => {
             <div className="flex items-center justify-center">
               <img className="h-48 md:h-64" src={`${import.meta.env.BASE_URL}logo_giic_big.svg`} alt="Logo" />
             </div>
-            <div className="flex items-center justify-left m-6">
+            {/* <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
                 <h5 className="text-xs md:text-sm lg:text-lg font-bold">Services</h5> <br />
                 <p className="text-xs md:text-lg ">- Financial Consulting</p>
                 <p className="text-xs md:text-lg ">- Investments</p>
                 <p className="text-xs md:text-lg ">- Sustainable Development Goals Projects (SDG)</p>
               </div>
-            </div>
+            </div> */}
             <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
                 <h5 className="text-xs md:text-lg lg:text-lg font-bold">Contact Us</h5> <br />
