@@ -158,7 +158,7 @@ const HomaPage = () => {
               </div>
             </div>
 
-            <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center bg-blue-900 opacity-50">
+            <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center bg-blue-950 opacity-75">
               <video
                 className="w-full h-full object-cover"
                 src={`${import.meta.env.BASE_URL}presentation.mp4`}
