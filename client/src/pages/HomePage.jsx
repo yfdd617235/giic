@@ -178,7 +178,7 @@ const HomaPage = () => {
         </div>
 
         {/*Mision & Vision*/}
-        <div className="bg-gradient-to-b from-white to-gray-100">
+        <div className=" border border-gray-300">
           <div className="container gap-10 flex flex-col md:flex-row justify-center md:items-center mx-auto px-4 lg:px-20">
 
             <div className="md:w-2/3 pt-10 md:py-10">

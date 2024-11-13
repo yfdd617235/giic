@@ -5,7 +5,6 @@ import { connectDB } from './db.js'; // Importar la función para conectar la ba
 connectDB().then(() => {
     console.log('Database connected');
 
-
     // Utiliza el puerto asignado o el puerto 3000 por defecto
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
