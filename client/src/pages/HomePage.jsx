@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Loader from '../components/Loader';
+import CopyEmail from '../components/CopyEmail';
 import { wakeUpServer } from '../api/axios'; // Importa la función wakeUpServer
 
 const HomaPage = () => {
@@ -208,7 +209,7 @@ const HomaPage = () => {
         style={{
           backgroundImage: `
             linear-gradient(rgb(255, 255, 255), rgba(183, 202, 253, 0.842)),
-            url('${import.meta.env.BASE_URL}banner.webp.jpg')`,
+            url('${import.meta.env.BASE_URL}banner.jpg')`,
           backgroundSize: 'cover', // Ajusta el tamaño de fondo para cubrir el contenedor
           backgroundRepeat: 'no-repeat', // Evita la repetición vertical y horizontal
           backgroundPosition: 'center center' // Centra la imagen
@@ -234,15 +235,7 @@ const HomaPage = () => {
                   Address: Intershore Chambers, Road Town, Tortola <br />
                   British Virgin Islands
                 </p>
-                <a
-                  href="mailto:director@grandeileinternational.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-xs md:text-sm"
-                >
-                  <EnvelopeIcon className="w-4 h-4 " /> {/* Ícono de Heroicons v2 */}
-                  <span className="text-xs md:text-lg">director@grandeileinternational.com</span>
-                </a>
+                <CopyEmail />
               </div>
             </div>
           </div>
